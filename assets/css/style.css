@@ -1,0 +1,22 @@
+body{
+    margin-top: 10%;
+    /* padding: 40px; */
+
+}
+
+.alignTextCenter {
+    text-align: center;
+    /* padding: 60%;
+    margin: 60%; */
+}
+
+.space {
+    /* position: absolute; */
+    /* top: 20vh; */
+    margin-top: 12%;
+    /* padding: 60%; */
+    /* margin: 80%; */
+    /* background-color: antiquewhite;
+    border-style: dotted;
+    border-color: black; */
+}
