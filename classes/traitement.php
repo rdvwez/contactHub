@@ -49,6 +49,16 @@ switch ($taff) {
         // var_dump($_SESSION['id']);
         // echo $_SESSION['id'] ;
     break;
+
+    case 3:
+            // echo'triament de l\'ajout';
+            $_POST['idu'] =  $_SESSION['id'];
+            $contact = new Contact($_POST);  //instenciation de de l'user
+            $contactManager = new contactManager(connexion()); //instenciation du manager 
+            $contactManager->add($contact); //instenciation du manager 
+            // print_r($_POST);
+
+    break;
     
     default:
         echo"aucune option de traitement pour cette opérarion";

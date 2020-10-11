@@ -10,7 +10,8 @@ class ContactManager
 
   public function add(Contact $contact)
   {
-    $q = $this->_db->prepare('INSERT INTO contact(nom,prenom,telephone,email,idu,commentaire) VALUES(:nom, :prenom,:telephone,:email,:idu,:commentaire)');
+    $q = $this->_db->prepare("INSERT INTO contact(nom,prenom,telephone,email,idu,commentaire) VALUES(:nom, :prenom,:telephone,:email,:idu,:commentaire)");
+    // $q->bindValue(':id', $contact->getId());
     $q->bindValue(':nom', $contact->getNom());
     $q->bindValue(':prenom', $contact->getPrenom());
     $q->bindValue(':telephone', $contact->getTelephone());
@@ -18,6 +19,7 @@ class ContactManager
     $q->bindValue(':idu', $contact->getIdu());
     $q->bindValue(':commrntaire', $contact->getCommentaire());
     $q->execute();
+    echo  $q->execute();
   }
 
   public function delete(Contact $contact)

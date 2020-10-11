@@ -29,8 +29,8 @@
     <!-- <link rel="canonical" href="https://icons.getbootstrap.com/icons/trash2/"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
@@ -89,10 +89,10 @@
                      <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
+            <!-- <form class="form-inline mt-2 mt-md-0"> -->
                 <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Deconnexion</button>
-            </form>
+            <!-- </form> -->
         </div>
     </nav>
       
@@ -106,10 +106,11 @@
       </div>
       <div class="row">
         
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <button class="btn  btn-primary" type="button" data-toggle="modal" data-target="#exampleModal">Ajouter un contact</button>
+         
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-9">
           <table class="table table-hover">
             <thead>
               <tr>
@@ -140,36 +141,42 @@
               </button>
             </div>
             <div class="modal-body">
-              <form class="addForm" action="../classes/traitement.php" method="post">
+            
+            <div class="alert alert-success alert-dismissible " id="confirmation" role="alert" style="display:none;">
+              <strong>Contact!</strong> Enregistrer avec success
+            </div>
+
+            <form class="addForm" id="addForm" action="../classes/traitement.php" method="post" >
        
-                <span class="alert alert-danger form-control error " hidden>Email ou Mot de passe incorect</span>
-                <div class="form-group">
-                  <label for="nom" class="sr-only">Nom:</label>
-                  <input type="nom" id="nom" class="form-control" name ="nom" placeholder="Nom" required autofocus>
-                </div>
-                <div class="form-group">
-                  <label for="prenom" class="sr-only">Prenom:</label>
-                  <input type="prenom" id="prenom" class="form-control" name="prenom" placeholder="Prenom" >
-                </div>
-                <div class="form-group">
-                  <label for="telephone" class="sr-only">Telephone:</label>
-                  <input type="telephone" id="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
-                </div>
-                <div class="form-group">
-                  <label for="email" class="sr-only">Email</label>
-                  <input type="email" id="email" class="form-control" name ="email" placeholder="Email" required autofocus>
-                </div>
-                <div class="form-group">
-                  <label for="commentaire" class="sr-only">Commentaire</label>
-                  <textarea name="commentaire" id="commentaire" class="form-control"  autofocus cols="10" rows="5"></textarea>
-                </div>
-                <input type="text"  value="1" name="taff" hidden>
-                <button class="btn btn-lg btn-primary btn-block" id="button" type="submit">enregistrer</button>
-              </form>
+       <span class="alert alert-danger form-control error " hidden>Email ou Mot de passe incorect</span>
+       <div class="form-group">
+         <label for="nom" class="sr-only">Nom:</label>
+         <input type="nom" id="nom" class="form-control" name ="nom" placeholder="Nom" required autofocus>
+       </div>
+       <div class="form-group">
+         <label for="prenom" class="sr-only">Prenom:</label>
+         <input type="prenom" id="prenom" class="form-control" name="prenom" placeholder="Prenom" >
+       </div>
+       <div class="form-group">
+         <label for="telephone" class="sr-only">Telephone:</label>
+         <input type="telephone" id="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
+       </div>
+       <div class="form-group">
+         <label for="email" class="sr-only">Email</label>
+         <input type="email" id="email" class="form-control" name ="email" placeholder="Email" required autofocus>
+       </div>
+       <div class="form-group">
+         <label for="commentaire" class="sr-only">Commentaire</label>
+         <textarea name="commentaire" id="commentaire" class="form-control"  autofocus cols="10" rows="5"></textarea>
+       </div>
+       <input type="text"  value="3" name="taff" hidden>
+       <button class="btn btn-sm btn-primary btn-block" id="button" type="submit">enregistrer</button>
+       <button type="reset" class="btn btn-sm btn-warning btn-block">vider le formulaire</button>
+     </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+              
             </div>
           </div>
         </div>

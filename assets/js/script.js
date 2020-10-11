@@ -52,9 +52,9 @@ class App {
 
       });
 
-      console.log('chargee youpi')
+      
     }
-
+    
     
     //focntion appeleé pendant la soumission du formulaire de connexion
     onSubmit = (e) => {
