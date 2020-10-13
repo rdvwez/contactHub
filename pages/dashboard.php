@@ -91,7 +91,7 @@
             </ul>
             <!-- <form class="form-inline mt-2 mt-md-0"> -->
                 <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Deconnexion</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" id="deconnexion">Deconnexion</button>
             <!-- </form> -->
         </div>
     </nav>
@@ -130,7 +130,25 @@
           <!-- <div class="col-sm-2"> </div> -->
 
       </div>
+      
+      <div class="row">
+      
+        <div  class="col-sm-3"></div>
+        <!-- <div></div> -->
+        <div  class="col-sm-6" id="upDatation" style="display:none;">
+        <div class="alert alert-success alert-dismissible " id="updateConfirmation" role="alert" style="display:none;">
+              <strong>Youpiiii!</strong> Modification effrctuée avec success avec success
+            </div>
+        <h2 class="alignTextCenter">Modifier le contact</h2>
+            <form class="upDateForm" id="upDateForm" action="../classes/traitement.php" method="post" >
+            </form>
+        <!-- formulaire -->
+        
+        </div>
+        <div  class="col-sm-3"></div>
+      </div>
 
+      <!-- fenetre de modale de creation de contact -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -145,6 +163,7 @@
             <div class="alert alert-success alert-dismissible " id="confirmation" role="alert" style="display:none;">
               <strong>Contact!</strong> Enregistrer avec success
             </div>
+            <span class="alert alert-danger form-control error " style="display:none;">Ce contact existe déja</span>
 
             <form class="addForm" id="addForm" action="../classes/traitement.php" method="post" >
        
@@ -162,14 +181,14 @@
          <input type="telephone" id="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
        </div>
        <div class="form-group">
-         <label for="email" class="sr-only">Email</label>
+         <label for="email" class="sr-only">Email:</label>
          <input type="email" id="email" class="form-control" name ="email" placeholder="Email" required autofocus>
        </div>
        <div class="form-group">
-         <label for="commentaire" class="sr-only">Commentaire</label>
+         <label for="commentaire" class="sr-only">Commentaire:</label>
          <textarea name="commentaire" id="commentaire" class="form-control"  autofocus cols="10" rows="5"></textarea>
        </div>
-       <input type="text"  value="3" name="taff" hidden>
+       <input type="text"  value="6" name="taff" hidden>
        <button class="btn btn-sm btn-primary btn-block" id="button" type="submit">enregistrer</button>
        <button type="reset" class="btn btn-sm btn-warning btn-block">vider le formulaire</button>
      </form>
@@ -181,6 +200,9 @@
           </div>
         </div>
       </div>
+
+      <!-- fenetre de modale de update du contact -->
+      
     
     </div>
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
@@ -195,7 +217,7 @@
 
   $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
-})
+})  
 
 </script>
   </body>
