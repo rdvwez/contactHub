@@ -16,8 +16,6 @@ switch ($taff) {
             $_SESSION['id'] =  $donnees['id'];
             echo 'success';
             // header('Location: ../pages/dashboard.php');
-            
-            // print_r($donnees);
          } //donnée verigiée, l'utilisateur existe 
         else {
             session_unset();
